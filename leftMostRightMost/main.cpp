@@ -14,6 +14,7 @@ int leftMost(int arr[], int n, int key)
         if (arr[mid] == key)
         {
             ans = mid;      
+           
             end = mid - 1;  
         }
         else if (arr[mid] > key)
@@ -61,7 +62,7 @@ int rightMost(int arr[], int n, int key)
 int main()
 {
     int arr[7] = {0, 1, 1, 2, 3, 3, 4};
-    cout << leftMost(arr, 7, 3); 
+    cout <<"Left most " <<  leftMost(arr, 7, 3); 
     cout << endl;
     cout << "Right most " << rightMost(arr, 7, 3);
     return 0;
