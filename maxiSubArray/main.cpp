@@ -7,7 +7,9 @@ int maxSubArray(vector<int>& nums) {
     int maxSum = nums[0];
     int currentSum = 0;
     for (int i = 0; i < n ; i++) {
-        currentSum = max(nums[i], currentSum + nums[i]);
+        currentSum = max(nums[i], currentSum + nums[i]); //always ask the qestion that if sum is less then 0 then should i start a new subarray or not
+        //if currentSum is less than 0 then we start a new subarray from the next element
+        //if currentSum is greater than 0 then we can continue adding to the current subarray
         maxSum = max(maxSum, currentSum);
     }
     return maxSum;
